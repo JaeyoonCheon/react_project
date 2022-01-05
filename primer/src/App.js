@@ -20,25 +20,15 @@ export default class App extends Component {
   handleClick = () => this.setState({ count: this.state.count + 1 });
 
   render = () => (
-    <table className="table table-striped table-bordered table-sm">
-      <thead className="bg-info text-white">
-        <tr>
-          <th>Value</th>
-          <th>Even?</th>
-        </tr>
-      </thead>
-      <tbody>
-        <td>{this.state.count}</td>
-        <td>{this.isEven(this.state.count)}</td>
-      </tbody>
-      <tfoot className="text-center">
-        <td colSpan="2">
-          <button className="btn btn-info m-2" onClick={this.handleClick}>
-            Click me
-          </button>
-          Number of things : {this.isEven(this.state.count)}
-        </td>
-      </tfoot>
-    </table>
+    <div className="m-2">
+      <div className="form-group">
+        <label>Name:</label>
+        <input className="form-control"></input>
+      </div>
+      <div className="form-group">
+        <label>City:</label>
+        <input className="form-control"></input>
+      </div>
+    </div>
   );
 }
