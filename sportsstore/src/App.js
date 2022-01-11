@@ -7,7 +7,7 @@ import {
   Switch,
   Redirect,
 } from "react-router-dom";
-import { ShopConnecter } from "./shop/ShopConnector";
+import { ShopConnector } from "./shop/ShopConnector";
 
 export default class App extends Component {
   render() {
@@ -15,7 +15,7 @@ export default class App extends Component {
       <Provider store={SportStoreDataStore}>
         <Router>
           <Switch>
-            <Route path="/shop" component={ShopConnecter}></Route>
+            <Route path="/shop" component={ShopConnector}></Route>
             <Redirect to="/shop"></Redirect>
           </Switch>
         </Router>
