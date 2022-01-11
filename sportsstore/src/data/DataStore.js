@@ -3,4 +3,6 @@ import { ShopReducer } from "./ShopReducer";
 import { CartReducer } from "./CartReducer";
 import { CommonReducer } from "./CommonReducer";
 
-export const SportStoreDataStore = createStore(ShopReducer, CartReducer);
+export const SportStoreDataStore = createStore(
+  CommonReducer(ShopReducer, CartReducer)
+);
